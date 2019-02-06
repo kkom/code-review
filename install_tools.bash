@@ -5,8 +5,13 @@ set -euo pipefail
 # This script installs tools which enable more efficient code review using the
 # git source control system.
 
-cd installation_scripts
+# Install the brew package manager if it is not installed yet
+if ! [ -x "$(command -v brew)" ]; then
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 
+# Install all individual tools
+cd installation_scripts
 for f in install_*.bash; do
-  bash $f
+    bash $f
 done
