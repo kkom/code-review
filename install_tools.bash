@@ -13,6 +13,6 @@ fi
 # Install all individual tools
 cd installation_scripts
 bash install_git.bash # install git first, as all other tools depend on it
-for f in install_*.bash; do
-    bash $f
+for install_script in install_*.bash; do
+    bash $install_script
 done
