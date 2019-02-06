@@ -12,7 +12,7 @@ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-pro
 
 if grep $GIT_PROMPT_RELATIVE $BASH_PROFILE
 then
-    echo "I'm guessing that $GIT_PROMPT_RELATIVE has been already added to $BASH_PROFILE..."
+    echo "I'm guessing that $GIT_PROMPT_RELATIVE has already been added to $BASH_PROFILE. Not changing it."
 else
     echo "Adding $GIT_PROMPT_RELATIVE to $BASH_PROFILE..."
 

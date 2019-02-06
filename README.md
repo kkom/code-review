@@ -1,13 +1,21 @@
-# Useful tools
+# Purpose
+
+This repository contains a set of guidelines for a simple code review flow centred around a GitHub repository.
+
+# Tools
+
+## Installation
+
+The `installation_scripts` directory contains installation scripts for the tools mentioned below.
+
+**Note:** Most scripts currently assume that they are run on a Mac OS machine.
+
+## Always know where you are
+
+`./install_git_prompt.sh` modifies your command line prompt to show the current git branch (if you are inside a git repository).
+
+# Useful resources
 
 * https://github.com/git/git/tree/master/contrib/completion
-* https://github.com/nvie/git-toolbelt
 * https://github.com/github/hub
-
-# Workflow
-
-## Know where you are
-
-Run the `./install_git_prompt.sh` script to modify your command line prompt to always show the current branch you are on (if you are in a git repository directory).
-
-*Note:* The script currently assumes that it's run on a Mac OS X machine.
+* https://github.com/nvie/git-toolbelt
