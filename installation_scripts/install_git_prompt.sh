@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-
-# Fail the entire script if any of the commands fails
-set -e
+# set strict mode
+set -euo pipefail
 
 BASH_PROFILE="$HOME/.bash_profile"
 GIT_PROMPT_ABSOLUTE="$HOME/.git-prompt.sh"
