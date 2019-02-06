@@ -20,6 +20,20 @@ The `installation_scripts` directory contains installation scripts for the tools
 
 **Note:** The installation script assumes that you have the `brew` package manager installed.
 
+# Workflow
+
+## Create a new branch for your Pull Request
+
+Your pull request should be limited in scope to a single feature, a single bug-fix or a small set of changes of the same nature (for example updating formatting in a few files).
+
+The following command creates your branch:
+
+```
+git branch my-feature
+```
+
+## Periodically ensure that you're working
+
 # Useful resources
 
 * https://github.com/git/git/tree/master/contrib/completion
