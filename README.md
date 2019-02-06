@@ -14,6 +14,10 @@ The `installation_scripts` directory contains installation scripts for the tools
 
 `./install_git_prompt.sh` modifies your command line prompt to show the current git branch (if you are inside a git repository).
 
+## Install git completion
+
+`./install_git_completion.sh` enables the completion of git objects (such as branches) and subcommands in your command line prompt.
+
 ## Install handy git shortcuts
 
 `./install_git_toolbelt.sh` installs `git-toolbelt` - a set of excellent git commands which automate common workflows.
