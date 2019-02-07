@@ -9,7 +9,7 @@ GIT_PROMPT_RELATIVE="~/.git-prompt.sh"
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh \
     --output $GIT_PROMPT_ABSOLUTE
 
-if grep $GIT_PROMPT_RELATIVE $BASH_PROFILE
+if grep "$GIT_PROMPT_RELATIVE" $BASH_PROFILE
 then
     echo "I'm guessing that $GIT_PROMPT_RELATIVE has already been added to $BASH_PROFILE. Not changing it."
 else
@@ -20,4 +20,5 @@ else
     echo "source $GIT_PROMPT_RELATIVE" >> $BASH_PROFILE
     echo "export PROMPT_COMMAND='__git_ps1 \"\h:\W \u\" \"\\\$ \"'" >> $BASH_PROFILE
     echo "export GIT_PS1_SHOWCOLORHINTS=1" >> $BASH_PROFILE
+    echo "export GIT_PS1_SHOWUPSTREAM=\"auto\"" >> $BASH_PROFILE
 fi
