@@ -1,45 +1,55 @@
 # Purpose
 
-This repository contains a set of guidelines for a simple code review flow centred around a GitHub repository.
+This guide describes a simple code review workflow centred around a GitHub repository.
 
-# Tools
+# Prerequisites
 
-## Installation
+The `installation_scripts` directory contains installation scripts for all command tools used in the workflow. Running the `./install_tools.bash` script will install them all.
 
-The `installation_scripts` directory contains installation scripts for the tools mentioned below.
-
-**Note:** Most scripts currently assume that they are run on a Mac OS machine.
-
-## Always know where you are
-
-`./install_git_prompt.bash` modifies your command line prompt to show the current git branch (if you are inside a git repository).
-
-## Install git completion
-
-`./install_git_completion.bash` enables the completion of git objects (such as branches) and subcommands in your command line prompt.
-
-## Install handy git shortcuts
-
-`./install_git_toolbelt.bash` installs `git-toolbelt` - a set of excellent git commands which automate common workflows.
-
-**Note:** The installation script assumes that you have the `brew` package manager installed.
+**Note:** The scripts were written for Mac OS. They also assume that you are using the `brew` package manager, which gets installed by the main install script if it's originally missing.
 
 # Workflow
 
-## Create a new branch for your Pull Request
+1. Your Pull Request should be limited in scope to a single feature, a single bug-fix or a small set of changes of the same nature (for example updating formatting in a few files).
+2. Every Pull Request should consist of a single git commit, which is continuously amended based on code review feedback.
+3. The Pull Request commit should be stored in its own branch, clearly named after what the Pull Request is meant to achieve.
 
-Your pull request should be limited in scope to a single feature, a single bug-fix or a small set of changes of the same nature (for example updating formatting in a few files).
+## Step-by-step creation of a Pull Request
 
-The following command creates your branch:
+### Create a new branch for your Pull Request
 
-```
-git branch my-feature
-```
+`git new-feature my-feature` alias creates a new branch and sets it to track `origin/master`.
 
-## Periodically ensure that you're working
+### Checkout your branch
 
-# Useful resources
+`git checkout my-feature` will change your working directory to the feature branch. Remember to `git rebase` as soon as you're on your branch.
 
-* https://github.com/git/git/tree/master/contrib/completion
-* https://github.com/github/hub
-* https://github.com/nvie/git-toolbelt
+## Tips and tricks
+
+### Rebase frequently
+
+`git rebase` rebases your feature branch on top of the branch which it is set to track.
+
+Once your Pull Request is accepted, it will be merged on top of `HEAD` of the `origin/master` branch. This is why you need to frequently rebase your feature branch. As a rule, do it:
+
+1. whenever you get back to work
+2. just before you publish your code as a Pull Request (some aliases will conveniently do it for you)
+3. about every 30 minutes while working on your feature
+
+### Figure out where you are
+
+If you feel lost anywhere in the process, these commands will help you figure out what's going on:
+
+* `git diff <optional_file(s)_specifier>` shows the difference between your working directory and staged files (i.e. what can be staged for commit or amend)
+* `git diff HEAD <optional_file(s)_specifier>` shows the difference between your working directory and committed files (i.e. what can be committed or amended, once you stage these files)
+* `git show` shows the latest commit (in case you've already committed something on your feature branch, it is what will be included in the Pull Request -- otherwise it's usually the latest commit from master)
+* `git slog` (smart log) shows a nicely formatted graph of all recent commits
+* `git status` shows the state of the working directory (which files are staged to be committed, which have been modified/added/removed, etc.)
+
+The above is in addition to the must-have command line prompt modification, which displays the current branch - `install_git_prompt.bash`.
+
+### Fix your repository
+
+Sometimes your local copy of the repository will get into a bad state. These commands will help you fix it:
+
+**TODO**
