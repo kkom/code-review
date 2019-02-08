@@ -30,17 +30,15 @@ The `installation_scripts` directory contains installation scripts for all comma
 
 ## Tips and tricks
 
-### Pull and rebase frequently
+### Rebase on master frequently
 
-`git pull` pull changes from remote origin rebases your feature branch on top of the branch which it is set to track.
+`git prom` (`pull --rebase origin master`) alias incorporates changes from tracking upstream branch into your feature branch.
 
-Once your Pull Request is accepted, it will be merged on top of `HEAD` of the `origin/master` branch. This is why you need to frequently rebase your feature branch. As a rule, do it:
+Once your Pull Request is accepted, it will be merged on top of `HEAD` of the `origin/master` branch. You need to frequently pull your feature branch to avoid a surprise when your Pull Request is about to be merged. As a rule, do it:
 
 1. whenever you get back to work
 2. just before you publish your code as a Pull Request (some aliases will conveniently do it for you)
 3. about every 30 minutes while working on your feature
-
-PS: The `./install_git_recommended_configs.bash`
 
 ### Figure out where you are
 
@@ -49,7 +47,7 @@ If you feel lost anywhere in the process, these commands will help you figure ou
 * `git diff <optional_file(s)_specifier>` shows the difference between your working directory and staged files (i.e. what can be staged for commit or amend)
 * `git diff HEAD <optional_file(s)_specifier>` shows the difference between your working directory and committed files (i.e. what can be committed or amended, once you stage these files)
 * `git show` shows the latest commit (if you've already committed something on your feature branch, it is what will be included in the Pull Request -- otherwise it's usually the latest commit from master)
-* `git slog` (smart log) alias shows a nicely formatted graph of recent commits
+* `git slog` (smart `log`) alias shows a nicely formatted graph of recent commits
 * `git status` shows the state of the working directory (which files are staged to be committed, which have been modified/added/removed, etc.)
 
 The above is in addition to the must-have command line prompt modification displaying the current branch, which you can install using `install_git_prompt.bash`.
@@ -58,4 +56,4 @@ The above is in addition to the must-have command line prompt modification displ
 
 Sometimes your local copy of the repository will get into a bad state. These commands will help you fix it:
 
-**TODO**
+* I accidentally committed to master: **TODO**
