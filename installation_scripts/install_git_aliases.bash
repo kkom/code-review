@@ -2,8 +2,8 @@
 # set strict mode
 set -euo pipefail
 
-# new-feature: creates a new feature branch tracking origin/master
-git config --global alias.new-feature "!git branch \$1 && git branch --set-upstream-to=origin/master \$1 && git checkout \$1 #"
+# feature: creates a new feature branch tracking origin/master
+git config --global alias.feature "!git checkout master && git branch \$1 && git branch --set-upstream-to=origin/master \$1 && git checkout \$1 #"
 
 # prom: robustly rebases changes against remote master
 git config --global alias.prom "pull --rebase origin master"

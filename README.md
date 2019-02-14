@@ -30,9 +30,9 @@ The `installation_scripts` directory contains installation scripts for all comma
 
 ## Tips and tricks
 
-### Rebase on master frequently
+### Rebase on origin master frequently
 
-`git prom` (`pull --rebase origin master`) alias incorporates changes from tracking upstream branch into your feature branch.
+`git prom` alias incorporates changes from tracking upstream branch into your feature branch.
 
 Once your Pull Request is accepted, it will be merged on top of `HEAD` of the `origin/master` branch. You need to frequently pull your feature branch to avoid a surprise when your Pull Request is about to be merged. As a rule, do it:
 
