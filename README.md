@@ -18,15 +18,19 @@ The `installation_scripts` directory contains installation scripts for all comma
 
 ### Create a new branch for your Pull Request
 
-`git new-feature <feature_name>` alias creates a new branch and sets it to track `origin/master`.
+`git feature <feature_name>` alias creates a new branch and sets it to track `origin/master`.
 
 ### Checkout your branch
 
-`git checkout <feature_name>` changes your working directory to the feature branch. Remember to `git rebase` as soon as you're on your branch.
+`git checkout <feature_name>` changes your working directory to the feature branch. Remember to `git prom` as soon as you're on your branch.
 
 ### Create a GitHub pull request
 
 `hub pull-request --push` creates a GitHub Pull Request based on your branch.
+
+### Incorporate changes from review
+
+`git add .` to add the extra files, `git fixup` to amend your commit, `git push -f` to sent it to GitHub again.
 
 ## Tips and tricks
 
