@@ -24,6 +24,10 @@ The `installation_scripts` directory contains installation scripts for all comma
 
 `git checkout <feature_name>` changes your working directory to the feature branch. Remember to `git prom` as soon as you're on your branch.
 
+### Commit changes to your branch
+
+`git add .` and `git commit -m "<your commit message>"`
+
 ### Create a GitHub pull request
 
 `hub pull-request --push` creates a GitHub Pull Request based on your branch.
