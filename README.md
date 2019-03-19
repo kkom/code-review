@@ -42,7 +42,7 @@ Once the GitHub Pull Request is accepted, squash and merge it using the web UI a
 
 ### Clean up obsolete local branches
 
-`git fop` alias prunes all your local branches which track now-deleted remote ones.
+`git cleanup` command deletes all local branches that have already been merged into master or develop..
 
 ## Tips and tricks
 
