@@ -36,6 +36,14 @@ The `installation_scripts` directory contains installation scripts for all comma
 
 `git add .` to add the extra files, `git fixup` to amend your commit, `git push -f` to sent it to GitHub again.
 
+### Merge the Pull Request
+
+Once the GitHub Pull Request is accepted, squash and merge it using the web UI and then delete the remote branch.
+
+### Clean up obsolete local branches
+
+`git fop` alias prunes all your local branches which track now-deleted remote ones.
+
 ## Tips and tricks
 
 ### Rebase on origin master frequently

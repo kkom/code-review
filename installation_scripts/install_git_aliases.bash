@@ -5,6 +5,9 @@ set -euo pipefail
 # feature: creates a new feature branch tracking origin/master
 git config --global alias.feature "!git checkout master && git branch \$1 && git branch --set-upstream-to=origin/master \$1 && git checkout \$1 #"
 
+# fop: prunes all obsolete local remote-tracking branches
+git config --global alias.fop "fetch origin --prune"
+
 # prom: robustly rebases changes against remote master
 git config --global alias.prom "pull --rebase origin master"
 
