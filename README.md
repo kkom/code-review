@@ -42,7 +42,7 @@ Once the GitHub Pull Request is accepted, squash and merge it using the web UI a
 
 ### Clean up obsolete local branches
 
-`git cleanup` command deletes all local branches that have already been merged into master or develop..
+`git purge` command deletes all local branches corresponding to deleted remote branches.
 
 ## Tips and tricks
 
