@@ -18,7 +18,11 @@ git config --global alias.feature "!git checkout master && git branch \$1 && git
 git config --global alias.prom "pull --rebase origin master"
 
 # purge: prunes all local branches corresponding to deleted remote branches
-git config --global alias.purge "!git checkout master && git fetch --all -p; git branch -vv | grep \": gone]\" | awk '{ print \$1 }' | xargs -n 1 git branch -D"
+git config --global alias.purge "!f() { \
+    git checkout master; \
+    git fetch --all --prune; \
+    git branch -vv | grep \": gone]\" | awk '{ print \$1 }' | xargs -n 1 git branch -D; \
+}; f"
 
 # slog: "smart log" command which prints a more readable repository history
 git config --global alias.slog "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
