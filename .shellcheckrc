@@ -1,0 +1,2 @@
+# Due to the way pre-commit checks scripts, it is not possible to follow files
+disable=SC1091
