@@ -2,11 +2,13 @@
 # set strict mode
 set -euo pipefail
 
-# sclone: "smart clone" recursively clones the submodules and installs the pre-commit framework
+# sclone: "smart" clones a repository, passing a number of sane parameters and performing setup
 git config --global alias.sclone "!f() { \
     git clone \$1 --recurse-submodules; \
     cd \$(basename \$1 .git); \
-    pre-commit install; \
+    if [[ -e \".pre-commit-config.yaml\" ]]; then \
+        pre-commit install; \
+    fi; \
 }; f"
 
 # feature: creates a new feature branch tracking origin/master
