@@ -4,7 +4,6 @@ set -euo pipefail
 
 source update_brew.bash
 
-brew install fzf
-brew install moreutils
+brew install fzf moreutils
 brew tap nvie/tap
 brew install nvie/tap/git-toolbelt
