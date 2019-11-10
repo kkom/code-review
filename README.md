@@ -4,9 +4,9 @@ This guide describes a simple code review workflow centred around a GitHub repos
 
 # Prerequisites
 
-The `installation_scripts` directory contains installation scripts for all command tools used in the workflow. Running the `./install_tools.bash` script will install them all.
+The `Makefile` contains installation scripts for all command tools used in the workflow. Run `make` in the repository root directory to install them.
 
-**Note:** The scripts were written for Mac OS. They also assume that you are using the `brew` package manager, which gets installed by the main install script if it's originally missing.
+**Note:** The scripts were written for Mac OS. They also assume that you are using the `brew` package manager, which gets installed if it's originally missing.
 
 # Workflow
 
@@ -65,8 +65,6 @@ If you feel lost anywhere in the process, these commands will help you figure ou
 * `git show` shows the latest commit (if you've already committed something on your feature branch, it is what will be included in the Pull Request -- otherwise it's usually the latest commit from master)
 * `git slog` (smart `log`) alias shows a nicely formatted graph of recent commits
 * `git status` shows the state of the working directory (which files are staged to be committed, which have been modified/added/removed, etc.)
-
-The above is in addition to the must-have command line prompt modification displaying the current branch, which you can install using `install_git_prompt.bash`.
 
 ### Fix your repository
 
