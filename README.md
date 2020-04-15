@@ -30,7 +30,7 @@ The `Makefile` contains installation scripts for all command tools used in the w
 
 ### Create a GitHub pull request
 
-`hub pull-request --push` creates a GitHub Pull Request based on your branch.
+`gh pr create` creates a GitHub Pull Request based on your branch.
 
 ### Incorporate changes from review
 
