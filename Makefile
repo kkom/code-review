@@ -43,7 +43,7 @@ install-git-toolbelt: install-brew
 	brew install nvie/tap/git-toolbelt
 
 install-gh: install-brew
-	brew install github/gh/gh
+	brew install gh
 
 install-brew:
 ifeq (, $(shell which brew))
