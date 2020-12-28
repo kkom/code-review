@@ -31,7 +31,7 @@ install-git-aliases:
 	}; f"
 
 	# slog: "smart log" command which prints a more readable repository history
-	git config --global alias.slog "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+	git config --global alias.slog "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'"
 
 install-git-configs:
 	# See: https://randyfay.com/content/simpler-rebasing-avoiding-unintentional-merge-commits
