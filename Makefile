@@ -1,6 +1,6 @@
 .PHONY: all install-git-aliases install-git-configs install-git-toolbelt install-gh install-brew
 
-all: install-git-aliases install-git-configs install-git-toolbelt install-gh
+all: install-git-aliases install-git-configs install-git-toolbelt install-git-town install-gh
 
 install-git-aliases:
 	# sclone: "smart" clones a repository, passing a number of sane parameters and performing setup
@@ -41,6 +41,9 @@ install-git-toolbelt: install-brew
 	brew install fzf moreutils
 	brew tap nvie/tap
 	brew install nvie/tap/git-toolbelt
+
+install-git-town: install-brew
+	brew install git-town
 
 install-gh: install-brew
 	brew install gh
